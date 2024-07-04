@@ -48,6 +48,10 @@ const Sidebar = () => (
               {item.title}
             </SidebarNavLink>
           ))}
+          <SidebarNavLink to="/animal-table">
+            <span className="icon-placeholder" /> {/* Replace with actual icon */}
+            AnimalTable
+          </SidebarNavLink>
         </nav>
       </div>
     </div>
@@ -76,6 +80,10 @@ const MobileSidebar = () => (
             {item.title}
           </SidebarNavLink>
         ))}
+        <SidebarNavLink to="/animal-table">
+          <span className="icon-placeholder" /> {/* Replace with actual icon */}
+          AnimalTable
+        </SidebarNavLink>
       </nav>
     </SheetContent>
   </Sheet>

@@ -5,6 +5,7 @@ import { Home } from "lucide-react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Layout from "./layouts/default"; // available: default, navbar, sidebar
 import Index from "./pages/Index.jsx";
+import AnimalTable from "./pages/AnimalTable.jsx";
 const queryClient = new QueryClient();
 
 export const navItems = [
@@ -12,6 +13,11 @@ export const navItems = [
     title: "Home", // Feel free to change this to your liking
     to: "/",
     icon: <Home className="h-4 w-4" />,
+  },
+{
+    title: "Animals",
+    to: "/animals",
+    icon: <Home className="h-4 w-4" />, // You can replace this with an appropriate icon
   },
 ];
 
@@ -24,6 +30,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<Index />} />
+              <Route path="/animals" element={<AnimalTable />} />
               {/* Add more routes here as needed */}
             </Route>
           </Routes>
